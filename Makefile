@@ -1,7 +1,7 @@
 PREFIX=/usr/local
 MANPREFIX=$(PREFIX)/share/man
 
-install: printcsv.sh
+install: printcsv org2csv
 	mkdir -p $(PREFIX)/bin
 	cp printcsv $(PREFIX)/bin/
 	chmod 755 $(PREFIX)/bin/printcsv
