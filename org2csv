@@ -1,0 +1,4 @@
+#!/usr/bin/sh
+
+# Quita | del comienzo; Quita | del final; Reemplaza | por , ; Borra espacios en blanco
+sed -e 's/^|//' $1 -e 's/|$//' -e 's/|/,/g' -e 's/ //g'			

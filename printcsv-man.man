@@ -1,0 +1,18 @@
+.TH "printcsv man-page" "1" 
+
+.SH "Summary"
+.PP
+Muestra archivos csv como tablas.
+
+.PP
+Lo hace con:
+.RS
+.nf
+\fCcolumn -t -s, $1 | less
+\fP
+.fi
+.RE
+
+.SH "Uso"
+.PP
+printcsv [csv-file]
