@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+mupdf $(find Papers -iname "*.pdf" | dmenu -i -l 10)
