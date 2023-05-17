@@ -1,3 +1,3 @@
 #!/usr/bin/sh
 
-mupdf $(find Papers -iname "*.pdf" | dmenu -i -l 10)
+mupdf $(find Papers -iname "*.pdf" | dmenu -b -i -p "Buscar paper:" -l 10 -nb "#6B5454" -nf "#FDF6E3" -sb "#D5807D" -sf "#FDF6E3")
