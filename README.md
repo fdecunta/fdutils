@@ -1,3 +1,1 @@
-# fdutils
-
-Some useful scripts for work. 
+Some scripts that I need
