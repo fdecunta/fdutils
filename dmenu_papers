@@ -1,6 +1,7 @@
 #!/usr/bin/sh
 
-PAPERSDIR="$HOME/Libros"
-echo $PAPERSDIR
+# Uses dmenu to search for a PDF file within a directory, then open it with mupdf.
 
-mupdf $(find "$PAPERSDIR" -iname "*.pdf" | dmenu -b -i -p "Buscar paper:" -l 10 -nb "#2E2E2E" -nf "#FDF6E3" -sb "#D5807D" -sf "#FDF6E3")
+PAPERSDIR="$HOME/Papers"
+
+mupdf "$(find "$PAPERSDIR" -iname "*.pdf" | sort | dmenu -b -i -p "Buscar paper:" -l 10 -nb "#2E2E2E" -nf "#FDF6E3" -sb "#D5807D" -sf "#FDF6E3")"

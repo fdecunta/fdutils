@@ -1,4 +1,9 @@
 #!/usr/bin/sh
 
-# Quita | del comienzo; Quita | del final; Reemplaza | por , ; Borra espacios en blanco
+# Transforms an org-mode table to a CSV format. It prints to stdout, so redirect to a .csv
+
+# Remove | from the beginning
+# Remove | from the end
+# Replace | with ,
+# Remove white spaces
 sed -e 's/^|//' $1 -e 's/|$//' -e 's/|/,/g' -e 's/ //g'			
