@@ -2,7 +2,7 @@
 
 # Backup files listed in backup_dirs.txt to a USB using rsync
 #
-# I added the USB drive to the fstab file and this script with cron
+# I added the USB drive to the fstab file and run this script with cron
 
 usb_dir="/media/USB_backup/"
 backup_dirs="/home/fdecunta/.config/backup/backup_dirs.txt"
