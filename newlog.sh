@@ -2,7 +2,7 @@
 
 usage() {
     cat << EOF
-Usage: dumblog [LOG MESSAGE]
+Usage: newlog [LOG MESSAGE]
 
 Prints a message prefixed with a timestamp to stdout.
 
@@ -10,7 +10,7 @@ Options:
   -h    Show this help message and exit
 
 Example:
-  dumblog "this is some text to log" >> experiment.log
+  newlog "this is some text to log" >> experiment.log
 EOF
     exit 0
 }
