@@ -1,0 +1,35 @@
+#!/usr/bin/bash
+
+# ------------------------------
+#     gscholar-search
+#
+# The program opens a dialog box
+# where you paste something to
+# search for in Google Scholar. 
+#
+# Requires:
+#         - zenity
+#         - web-browser
+# ------------------------------
+
+BROWSER="brave-browser"
+
+# Open a dialog box to entry the text to search for
+SEARCH_RAW=$(zenity --entry \
+		    --text="Buscar en Google Scholar: " \
+		    --ok-label "Buscar")
+
+# Check user's decision in the dialog box (Buscar/Cancel):
+# Buscar: $?=0; Cancel $?=1
+if [ "$?" = 0 ]; then
+    # Replace new lines with a white space
+    SEARCH_NONEWLINES=$(printf '%s' "$SEARCH_RAW" | tr '\n' ' ')
+
+    # Replace white spaces with a '+'
+    SEARCH_FINAL=$(printf '%s' "$SEARCH_NONEWLINES" | tr ' ' '+')
+    
+    # Insert the text without new lines nor spaces in the Google Scholar search direction
+    COMPLETE_SEARCH="https://scholar.google.com/scholar?hl=es&as_sdt=0%2C5&q="$SEARCH_FINAL"&btnG="
+
+    "$BROWSER" "$COMPLETE_SEARCH"
+fi
